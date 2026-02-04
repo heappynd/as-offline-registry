@@ -36,7 +36,7 @@ const args = process.argv.slice(2)
 
 // Get all components or default to 'all' if no component is provided
 const components = args.length >= 2 ? args.slice(1) : ['all']
-
+console.log('ELEMENTS_REGISTRY_URL', ELEMENTS_REGISTRY_URL)
 // Get the target URLs for all components
 const targetUrls = components
   .map(component =>
@@ -45,9 +45,10 @@ const targetUrls = components
       ELEMENTS_REGISTRY_URL,
     ).toString(),
   )
-  .join(' ')
+  .join(' ')  
 
 const fullCommand = `${commandPrefix} shadcn-vue@latest add ${targetUrls}`
+console.log('fullCommand', fullCommand)
 const result = spawnSync(fullCommand, {
   stdio: 'inherit',
   shell: true,
