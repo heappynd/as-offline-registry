@@ -1,0 +1,12 @@
+{
+  "packageManager": "pnpm@10.28.0",
+  "type": "module",
+  "name": "as-offline-registry",
+  "scripts": {
+    "build:registry": "node scripts/build.js",
+    "start:registry": "http-server ./dist -p 4873"
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}

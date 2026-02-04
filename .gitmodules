@@ -1,0 +1,6 @@
+[submodule "repos/ai-elements-vue"]
+	path = repos/ai-elements-vue
+	url = https://github.com/vuepont/ai-elements-vue.git
+[submodule "repos/shadcn-vue"]
+	path = repos/shadcn-vue
+	url = https://github.com/unovue/shadcn-vue.git
