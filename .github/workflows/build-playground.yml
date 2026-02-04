@@ -14,6 +14,9 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          submodules: recursive
+          fetch-depth: 0 # 如果构建需要读取 git 提交记录，设为 0；否则默认 1 即可
 
       - name: Setup pnpm
         uses: pnpm/action-setup@v4
